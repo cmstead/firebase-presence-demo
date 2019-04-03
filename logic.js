@@ -34,6 +34,8 @@ connectedRef.on("value", function(snap) {
     // Add user to the connections list.
     var con = connectionsRef.push(true);
 
+    console.log('This is the thing.', con);
+
     // Remove user from the connection list when they disconnect.
     con.onDisconnect().remove();
   }
